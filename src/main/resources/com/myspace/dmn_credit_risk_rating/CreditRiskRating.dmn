@@ -148,14 +148,63 @@
       </dmn:input>
       <dmn:output id="_9E75AB93-0478-46C0-B798-FDF91585762A" typeRef="string"/>
       <dmn:rule id="_B92FDD60-AFD0-4B2B-9423-F82A9EB5D902">
+        <dmn:description>High Risk</dmn:description>
         <dmn:inputEntry id="_F1F345E9-804C-42ED-9D52-1155C355C409">
-          <dmn:text>['US','UK','IR','FR',</dmn:text>
+          <dmn:text>['AF','IR','VE','LY']</dmn:text>
         </dmn:inputEntry>
         <dmn:inputEntry id="_B2A611B2-05E0-4B06-A942-669647AD44AE">
-          <dmn:text></dmn:text>
+          <dmn:text>-</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry id="_11BA6E45-7DDA-4017-ABA7-F8D3D8D3B954">
-          <dmn:text></dmn:text>
+          <dmn:text>High</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule id="_7D725820-941B-4FAF-9AD2-6A5B2962C616">
+        <dmn:description>Low Risk</dmn:description>
+        <dmn:inputEntry id="_57C66B4B-5F29-414B-8A5A-9F6ED98F5C8C">
+          <dmn:text>['DE','NO','CH','NO']</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_60026DFE-69A6-4196-8CEF-6354D66A2CB8">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_B3565FEF-1E28-46C3-A43C-BD6262DC55C0">
+          <dmn:text>Low</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule id="_398D9843-332C-433D-BC37-CC6865FC2F4F">
+        <dmn:description>Low Risk</dmn:description>
+        <dmn:inputEntry id="_D65B01F2-3A4E-43A7-B467-C8011D870026">
+          <dmn:text>['IN','CN','CO','IT']</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_8CC603E1-FBFD-41F1-92CB-7E7700D847FF">
+          <dmn:text>['Retail','Agriculture']</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_C57BD477-3872-452C-80F8-F855C0FC2209">
+          <dmn:text>Low</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule id="_1BC2B4DB-3B42-4540-A9B7-ECC5B18A7491">
+        <dmn:description>Medium Risk</dmn:description>
+        <dmn:inputEntry id="_D79B8205-3303-416A-9627-35CD2028E923">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_04E0904C-44B9-4016-A4E8-B984149E8D0D">
+          <dmn:text>['Retail','Agriculture','Transport And Communications','Construction','Utility']</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_47C92B68-BB0C-47A1-9466-AEBD0EC2D212">
+          <dmn:text>Medium</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule id="_0BD31472-F33D-4011-AD8C-6EF56A6A8519">
+        <dmn:description>High Risk</dmn:description>
+        <dmn:inputEntry id="_85D8C8E5-FF07-4D60-8E2A-59790D161A77">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_1163C01E-0E4F-4395-8187-03C59CB631C8">
+          <dmn:text>['Others']</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_ABD4CC4B-22BD-4D1A-86DE-85498333ECC5">
+          <dmn:text>High</dmn:text>
         </dmn:outputEntry>
       </dmn:rule>
     </dmn:decisionTable>
