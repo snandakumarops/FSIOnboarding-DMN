@@ -19,12 +19,12 @@
         </dmn:inputExpression>
       </dmn:input>
       <dmn:input id="_FE212171-F850-419C-A74B-D8AD523DDFC0">
-        <dmn:inputExpression id="_C6BC05B6-B900-4BFE-9E24-57949B5E362A" typeRef="string">
+        <dmn:inputExpression id="_C6BC05B6-B900-4BFE-9E24-57949B5E362A" typeRef="number">
           <dmn:text>Size</dmn:text>
         </dmn:inputExpression>
       </dmn:input>
       <dmn:input id="_C9E2C315-7ECB-4350-A694-F73A99198462">
-        <dmn:inputExpression id="_0C3FD507-1C6B-4945-AA3E-5EE6EEDAEF6E" typeRef="string">
+        <dmn:inputExpression id="_0C3FD507-1C6B-4945-AA3E-5EE6EEDAEF6E" typeRef="number">
           <dmn:text>Total Assets</dmn:text>
         </dmn:inputExpression>
       </dmn:input>
@@ -127,6 +127,39 @@
   <dmn:inputData id="_97D8772B-266F-4E15-BA33-4FEA8719350F" name="Entity Type">
     <dmn:variable id="_5187D444-AACF-4FA1-86B0-0B2E4EA1327F" name="Entity Type"/>
   </dmn:inputData>
+  <dmn:decision id="_6CEB356E-9366-4910-85E2-AB5FD949F74D" name="Country Risk Rating">
+    <dmn:variable id="_F724E358-1AB7-426A-ABB5-88624C7B4029" name="Country Risk Rating" typeRef="string"/>
+    <dmn:informationRequirement id="_19B4B440-5036-4A2D-B60D-9B53EDF04655">
+      <dmn:requiredInput href="#_4D64FE46-8DC7-421C-889F-48A65651739A"/>
+    </dmn:informationRequirement>
+    <dmn:informationRequirement id="_5BA35616-541D-4C69-8F53-63F6183538B4">
+      <dmn:requiredInput href="#_EE87C06D-9BBB-4522-A4A8-F32C980363CB"/>
+    </dmn:informationRequirement>
+    <dmn:decisionTable id="_F3FA8E79-7126-4620-B264-17506C361964" hitPolicy="UNIQUE" preferredOrientation="Rule-as-Row">
+      <dmn:input id="_874DF1E1-19F6-4807-99AA-413341023112">
+        <dmn:inputExpression id="_9FA2FA24-5C60-4D7C-8D81-05107E46E461" typeRef="string">
+          <dmn:text>Registration Country</dmn:text>
+        </dmn:inputExpression>
+      </dmn:input>
+      <dmn:input id="_A5DD6E86-AB1D-4201-BAB9-6630B66ABFB5">
+        <dmn:inputExpression id="_BD9B6A3A-0075-47DA-B2A9-F01000546323" typeRef="string">
+          <dmn:text>Industry Type</dmn:text>
+        </dmn:inputExpression>
+      </dmn:input>
+      <dmn:output id="_9E75AB93-0478-46C0-B798-FDF91585762A" typeRef="string"/>
+      <dmn:rule id="_B92FDD60-AFD0-4B2B-9423-F82A9EB5D902">
+        <dmn:inputEntry id="_F1F345E9-804C-42ED-9D52-1155C355C409">
+          <dmn:text>['US','UK','IR','FR',</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_B2A611B2-05E0-4B06-A942-669647AD44AE">
+          <dmn:text></dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_11BA6E45-7DDA-4017-ABA7-F8D3D8D3B954">
+          <dmn:text></dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+    </dmn:decisionTable>
+  </dmn:decision>
   <dmn:inputData id="_4D64FE46-8DC7-421C-889F-48A65651739A" name="Industry Type">
     <dmn:variable id="_B8FC8818-D41B-4860-82A3-5744E5619500" name="Industry Type"/>
   </dmn:inputData>
@@ -147,6 +180,13 @@
             <kie:width>100.0</kie:width>
             <kie:width>186.0</kie:width>
             <kie:width>308.0</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_F3FA8E79-7126-4620-B264-17506C361964">
+            <kie:width>50.0</kie:width>
+            <kie:width>290.0</kie:width>
+            <kie:width>191.0</kie:width>
+            <kie:width>185.0</kie:width>
+            <kie:width>100.0</kie:width>
           </kie:ComponentWidths>
         </kie:ComponentsWidthsExtension>
       </di:extension>
@@ -175,6 +215,15 @@
           <dmndi:FontColor red="0" green="0" blue="0"/>
         </dmndi:DMNStyle>
         <dc:Bounds x="843" y="251" width="100" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="dmnshape-_6CEB356E-9366-4910-85E2-AB5FD949F74D" dmnElementRef="_6CEB356E-9366-4910-85E2-AB5FD949F74D" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="761" y="122" width="131" height="84"/>
         <dmndi:DMNLabel/>
       </dmndi:DMNShape>
       <dmndi:DMNShape id="dmnshape-_EA40707E-01E6-409B-AB38-74A28D231488" dmnElementRef="_EA40707E-01E6-409B-AB38-74A28D231488" isCollapsed="false">
@@ -215,6 +264,14 @@
       <dmndi:DMNEdge id="dmnedge-_029FD8C9-77B0-4038-864E-EE688A4046E7" dmnElementRef="_029FD8C9-77B0-4038-864E-EE688A4046E7">
         <di:waypoint x="449" y="281"/>
         <di:waypoint x="411" y="158.5"/>
+      </dmndi:DMNEdge>
+      <dmndi:DMNEdge id="dmnedge-_19B4B440-5036-4A2D-B60D-9B53EDF04655" dmnElementRef="_19B4B440-5036-4A2D-B60D-9B53EDF04655">
+        <di:waypoint x="777" y="276"/>
+        <di:waypoint x="761" y="164"/>
+      </dmndi:DMNEdge>
+      <dmndi:DMNEdge id="dmnedge-_5BA35616-541D-4C69-8F53-63F6183538B4" dmnElementRef="_5BA35616-541D-4C69-8F53-63F6183538B4">
+        <di:waypoint x="843" y="276"/>
+        <di:waypoint x="892" y="164"/>
       </dmndi:DMNEdge>
     </dmndi:DMNDiagram>
   </dmndi:DMNDI>
