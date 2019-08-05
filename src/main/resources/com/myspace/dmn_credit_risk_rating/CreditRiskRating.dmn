@@ -2,7 +2,7 @@
 <dmn:definitions xmlns:dmn="http://www.omg.org/spec/DMN/20180521/MODEL/" xmlns="https://github.com/kiegroup/drools/kie-dmn/_5A297A81-16AC-4AB8-A2D8-70AE6DD44DA3" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:kie="http://www.drools.org/kie/dmn/1.2" xmlns:feel="http://www.omg.org/spec/DMN/20180521/FEEL/" xmlns:dmndi="http://www.omg.org/spec/DMN/20180521/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" id="_5DCFD66B-2BC1-4AD7-A139-2250D833516F" name="CreditRiskRating" expressionLanguage="http://www.omg.org/spec/DMN/20180521/FEEL/" typeLanguage="http://www.omg.org/spec/DMN/20180521/FEEL/" namespace="https://github.com/kiegroup/drools/kie-dmn/_5A297A81-16AC-4AB8-A2D8-70AE6DD44DA3">
   <dmn:extensionElements/>
   <dmn:decision id="_B82538BD-C4F9-49CF-BF7F-C19692667AA6" name="Segment Risk Rating">
-    <dmn:variable id="_1D8F7998-F389-4632-BED6-151B0A1655F2" name="Segment Risk Rating"/>
+    <dmn:variable id="_1D8F7998-F389-4632-BED6-151B0A1655F2" name="Segment Risk Rating" typeRef="string"/>
     <dmn:informationRequirement id="_B1EA9A1D-E974-48D4-9B63-85D8C86B13D9">
       <dmn:requiredInput href="#_B435D912-E248-4E5F-8023-9714B929E122"/>
     </dmn:informationRequirement>
@@ -12,7 +12,114 @@
     <dmn:informationRequirement id="_029FD8C9-77B0-4038-864E-EE688A4046E7">
       <dmn:requiredInput href="#_97D8772B-266F-4E15-BA33-4FEA8719350F"/>
     </dmn:informationRequirement>
-    <dmn:literalExpression/>
+    <dmn:decisionTable id="_99D09239-09BB-40E8-A0E1-D4EF359944E7" hitPolicy="UNIQUE" preferredOrientation="Rule-as-Row">
+      <dmn:input id="_E11ED5B5-4943-4B9A-BE55-A73B43C7A857">
+        <dmn:inputExpression id="_7B26310F-7B80-4622-9D25-5614508A943F" typeRef="string">
+          <dmn:text>Entity Type</dmn:text>
+        </dmn:inputExpression>
+      </dmn:input>
+      <dmn:input id="_FE212171-F850-419C-A74B-D8AD523DDFC0">
+        <dmn:inputExpression id="_C6BC05B6-B900-4BFE-9E24-57949B5E362A" typeRef="string">
+          <dmn:text>Size</dmn:text>
+        </dmn:inputExpression>
+      </dmn:input>
+      <dmn:input id="_C9E2C315-7ECB-4350-A694-F73A99198462">
+        <dmn:inputExpression id="_0C3FD507-1C6B-4945-AA3E-5EE6EEDAEF6E" typeRef="string">
+          <dmn:text>Total Assets</dmn:text>
+        </dmn:inputExpression>
+      </dmn:input>
+      <dmn:output id="_150886F2-855F-4775-A6F5-F649018CD0E4" typeRef="string"/>
+      <dmn:rule id="_28CD2ECD-DD19-47E3-99F2-24FACE810810">
+        <dmn:description>Low Risk</dmn:description>
+        <dmn:inputEntry id="_8D230799-77FB-4F31-8950-2C73E9CE436B">
+          <dmn:text>['Sole Proprietorship','General Patnership']</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_6568341B-0F84-4735-8FF4-F0C50E0D309F">
+          <dmn:text>[1..10000]</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_348DF3D5-6EE8-43C3-94EC-B2BEED91D4FE">
+          <dmn:text>&lt;200000</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_603589AC-0B24-4F00-90FB-C75F70946B4E">
+          <dmn:text>Low</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule id="_8EF9572C-4E39-4FE1-8FA8-5EE985AC6BB7">
+        <dmn:description>Medium Risk</dmn:description>
+        <dmn:inputEntry id="_201B7921-7B01-4225-A328-439D715F7FF5">
+          <dmn:text>['Sole Proprietorship','General Patnership']</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_D02C0BE3-4967-4FFE-843F-3ECB46D59656">
+          <dmn:text>&gt;10000</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_3D0BCD6D-43CF-441D-B730-D20642E5F91A">
+          <dmn:text>&gt;200000</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_F492CCA2-D5BC-45CD-A072-303ED798175C">
+          <dmn:text>Medium</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule id="_C8461E90-55E6-4C68-B5B2-D100C5E2F13D">
+        <dmn:description>Medium Risk</dmn:description>
+        <dmn:inputEntry id="_9F95B046-5820-4D6A-B7A0-55EB823B2571">
+          <dmn:text>['Limited Partneship','Limited Liability Company']</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_A508BCFE-4390-4231-B35E-65438C89854F">
+          <dmn:text>&gt;100000</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_726067BE-EC49-40C5-90DD-B73FD538B440">
+          <dmn:text>&gt;500000</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_6D12F54E-C7E8-4E60-820A-5EB1A342AAEB">
+          <dmn:text>Medium</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule id="_2A901558-B4DC-4B1D-8D5C-CB9E68E69068">
+        <dmn:description>High Risk</dmn:description>
+        <dmn:inputEntry id="_33747B73-1AD7-4D32-8F56-B9543E64AC29">
+          <dmn:text>['C-corporation','S-corporation']</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_C24C50B2-6C23-483D-8B8A-D8C6F0EBE497">
+          <dmn:text>&gt;100000</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_3FF0E20A-7557-4529-BC1B-A15BCF828848">
+          <dmn:text>&gt;500000</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_E6B175E7-9C12-4B40-B5B6-A1748363FC32">
+          <dmn:text>High</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule id="_78C27F9E-C408-4348-A5AA-6EC6AAADFEAF">
+        <dmn:description>Low Risk</dmn:description>
+        <dmn:inputEntry id="_471C76BD-8393-4684-9F50-6AF1349DD8D9">
+          <dmn:text>['Limited Partneship']</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_82175123-8DCD-474F-997B-928DA7D154C7">
+          <dmn:text>[1..10000]</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_AEFD5188-8D0E-4CC1-9BF8-0A14C90E985B">
+          <dmn:text>[1...100000]</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_5DE461A9-4BA1-4DAB-9687-CA3C87E303CA">
+          <dmn:text>Low</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule id="_D09B931D-E9FB-4441-8906-10B3F60D2BAE">
+        <dmn:description>Low Risk</dmn:description>
+        <dmn:inputEntry id="_0E56D48D-7247-4367-BC6B-3C3BAC0A7474">
+          <dmn:text>['C-corporation']</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_4B4CEA15-A8E9-46FF-8274-60CBB004244C">
+          <dmn:text>&lt;10000</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_C56472A4-77E2-43B6-A276-214D56F3E9C2">
+          <dmn:text>&gt;500000</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_0523FA9E-09A5-4FB7-8EAE-0C2BA3117B3F">
+          <dmn:text>Low</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+    </dmn:decisionTable>
   </dmn:decision>
   <dmn:inputData id="_B435D912-E248-4E5F-8023-9714B929E122" name="Total Assets">
     <dmn:variable id="_6E73C7EF-C067-4F21-BF48-BA6CACDB2FE8" name="Total Assets"/>
@@ -32,7 +139,16 @@
   <dmndi:DMNDI>
     <dmndi:DMNDiagram>
       <di:extension>
-        <kie:ComponentsWidthsExtension/>
+        <kie:ComponentsWidthsExtension>
+          <kie:ComponentWidths dmnElementRef="_99D09239-09BB-40E8-A0E1-D4EF359944E7">
+            <kie:width>50.0</kie:width>
+            <kie:width>421.0</kie:width>
+            <kie:width>100.0</kie:width>
+            <kie:width>100.0</kie:width>
+            <kie:width>186.0</kie:width>
+            <kie:width>308.0</kie:width>
+          </kie:ComponentWidths>
+        </kie:ComponentsWidthsExtension>
       </di:extension>
       <dmndi:DMNShape id="dmnshape-_B435D912-E248-4E5F-8023-9714B929E122" dmnElementRef="_B435D912-E248-4E5F-8023-9714B929E122" isCollapsed="false">
         <dmndi:DMNStyle>
