@@ -119,6 +119,21 @@
           <dmn:text>"Low"</dmn:text>
         </dmn:outputEntry>
       </dmn:rule>
+      <dmn:rule id="_CFE3D197-CF04-419B-B093-B57279630FF5">
+        <dmn:description>Medium Risk</dmn:description>
+        <dmn:inputEntry id="_E6AAEA51-9651-4ACB-B756-ACA1E041F042">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_C60EA682-50A9-4C93-8836-0A63E3700DEB">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_9501EF9B-B5C8-4A4E-AC91-2CBBD8D2DE57">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_8B175336-33F8-4DEA-B681-560D8A6971EA">
+          <dmn:text>"Medium"</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
     </dmn:decisionTable>
   </dmn:decision>
   <dmn:inputData id="_B435D912-E248-4E5F-8023-9714B929E122" name="Total Assets">
