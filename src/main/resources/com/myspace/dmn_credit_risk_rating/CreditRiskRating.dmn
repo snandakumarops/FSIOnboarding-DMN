@@ -129,10 +129,10 @@
   </dmn:inputData>
   <dmn:decision id="_1A58A9BC-363D-4AE7-8775-0C29EB9A53DB" name="Overall Risk Rating">
     <dmn:variable id="_E65FC6AF-7E45-4CE7-A6E4-A36DB6009C60" name="Overall Risk Rating" typeRef="string"/>
-    <dmn:informationRequirement id="_E18A6882-1350-4B30-8366-87346A4908DC">
+    <dmn:informationRequirement id="_296487EE-86E2-4106-BBC4-E33E486F6CCD">
       <dmn:requiredDecision href="#_B82538BD-C4F9-49CF-BF7F-C19692667AA6"/>
     </dmn:informationRequirement>
-    <dmn:informationRequirement id="_997D92B6-261A-4195-8261-9E1920D20828">
+    <dmn:informationRequirement id="_D391A205-67DE-4370-AF2F-5EE985331F41">
       <dmn:requiredDecision href="#_6CEB356E-9366-4910-85E2-AB5FD949F74D"/>
     </dmn:informationRequirement>
     <dmn:decisionTable id="_9F2B3FBE-1710-4411-969A-36C7EB74A1DA" hitPolicy="UNIQUE" preferredOrientation="Rule-as-Row">
@@ -404,11 +404,11 @@
         <di:waypoint x="929" y="423"/>
         <di:waypoint x="978" y="311"/>
       </dmndi:DMNEdge>
-      <dmndi:DMNEdge id="dmnedge-_E18A6882-1350-4B30-8366-87346A4908DC" dmnElementRef="_E18A6882-1350-4B30-8366-87346A4908DC">
+      <dmndi:DMNEdge id="dmnedge-_296487EE-86E2-4106-BBC4-E33E486F6CCD" dmnElementRef="_296487EE-86E2-4106-BBC4-E33E486F6CCD">
         <di:waypoint x="497" y="305.5"/>
         <di:waypoint x="580" y="148"/>
       </dmndi:DMNEdge>
-      <dmndi:DMNEdge id="dmnedge-_997D92B6-261A-4195-8261-9E1920D20828" dmnElementRef="_997D92B6-261A-4195-8261-9E1920D20828">
+      <dmndi:DMNEdge id="dmnedge-_D391A205-67DE-4370-AF2F-5EE985331F41" dmnElementRef="_D391A205-67DE-4370-AF2F-5EE985331F41">
         <di:waypoint x="847" y="311"/>
         <di:waypoint x="757" y="148"/>
       </dmndi:DMNEdge>
