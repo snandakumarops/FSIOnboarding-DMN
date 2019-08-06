@@ -50,7 +50,7 @@
           <dmn:text>["Sole Proprietorship","General Patnership"]</dmn:text>
         </dmn:inputEntry>
         <dmn:inputEntry id="_D02C0BE3-4967-4FFE-843F-3ECB46D59656">
-          <dmn:text>[1..10000]</dmn:text>
+          <dmn:text>&lt;1000</dmn:text>
         </dmn:inputEntry>
         <dmn:inputEntry id="_3D0BCD6D-43CF-441D-B730-D20642E5F91A">
           <dmn:text>&gt;200000</dmn:text>
@@ -95,10 +95,10 @@
           <dmn:text>["Limited Partneship"]</dmn:text>
         </dmn:inputEntry>
         <dmn:inputEntry id="_82175123-8DCD-474F-997B-928DA7D154C7">
-          <dmn:text>[1..10000]</dmn:text>
+          <dmn:text>&lt;10000</dmn:text>
         </dmn:inputEntry>
         <dmn:inputEntry id="_AEFD5188-8D0E-4CC1-9BF8-0A14C90E985B">
-          <dmn:text>[1...100000]</dmn:text>
+          <dmn:text>&lt;100000</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry id="_5DE461A9-4BA1-4DAB-9687-CA3C87E303CA">
           <dmn:text>"Low"</dmn:text>
@@ -208,6 +208,9 @@
       </dmn:rule>
     </dmn:decisionTable>
   </dmn:decision>
+  <dmn:inputData id="_4D64FE46-8DC7-421C-889F-48A65651739A" name="Industry Type">
+    <dmn:variable id="_B8FC8818-D41B-4860-82A3-5744E5619500" name="Industry Type" typeRef="string"/>
+  </dmn:inputData>
   <dmn:decision id="_6CEB356E-9366-4910-85E2-AB5FD949F74D" name="Country Risk Rating">
     <dmn:variable id="_F724E358-1AB7-426A-ABB5-88624C7B4029" name="Country Risk Rating" typeRef="string"/>
     <dmn:informationRequirement id="_19B4B440-5036-4A2D-B60D-9B53EDF04655">
@@ -290,9 +293,6 @@
       </dmn:rule>
     </dmn:decisionTable>
   </dmn:decision>
-  <dmn:inputData id="_4D64FE46-8DC7-421C-889F-48A65651739A" name="Industry Type">
-    <dmn:variable id="_B8FC8818-D41B-4860-82A3-5744E5619500" name="Industry Type" typeRef="string"/>
-  </dmn:inputData>
   <dmn:inputData id="_EE87C06D-9BBB-4522-A4A8-F32C980363CB" name="Registration Country">
     <dmn:variable id="_4195F010-8F7C-45A0-A915-43EBE06A8BBD" name="Registration Country" typeRef="string"/>
   </dmn:inputData>
@@ -363,15 +363,6 @@
         <dc:Bounds x="583.5" y="105" width="177" height="86"/>
         <dmndi:DMNLabel/>
       </dmndi:DMNShape>
-      <dmndi:DMNShape id="dmnshape-_6CEB356E-9366-4910-85E2-AB5FD949F74D" dmnElementRef="_6CEB356E-9366-4910-85E2-AB5FD949F74D" isCollapsed="false">
-        <dmndi:DMNStyle>
-          <dmndi:FillColor red="255" green="255" blue="255"/>
-          <dmndi:StrokeColor red="0" green="0" blue="0"/>
-          <dmndi:FontColor red="0" green="0" blue="0"/>
-        </dmndi:DMNStyle>
-        <dc:Bounds x="847" y="269" width="131" height="84"/>
-        <dmndi:DMNLabel/>
-      </dmndi:DMNShape>
       <dmndi:DMNShape id="dmnshape-_4D64FE46-8DC7-421C-889F-48A65651739A" dmnElementRef="_4D64FE46-8DC7-421C-889F-48A65651739A" isCollapsed="false">
         <dmndi:DMNStyle>
           <dmndi:FillColor red="255" green="255" blue="255"/>
@@ -379,6 +370,15 @@
           <dmndi:FontColor red="0" green="0" blue="0"/>
         </dmndi:DMNStyle>
         <dc:Bounds x="763" y="398" width="100" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="dmnshape-_6CEB356E-9366-4910-85E2-AB5FD949F74D" dmnElementRef="_6CEB356E-9366-4910-85E2-AB5FD949F74D" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="847" y="269" width="131" height="84"/>
         <dmndi:DMNLabel/>
       </dmndi:DMNShape>
       <dmndi:DMNShape id="dmnshape-_EE87C06D-9BBB-4522-A4A8-F32C980363CB" dmnElementRef="_EE87C06D-9BBB-4522-A4A8-F32C980363CB" isCollapsed="false">
