@@ -154,6 +154,24 @@
           <factAlias>Country Risk Rating</factAlias>
           <expressionAlias>value</expressionAlias>
         </FactMapping>
+        <FactMapping>
+          <expressionElements>
+            <ExpressionElement>
+              <step>Overall Risk Rating</step>
+            </ExpressionElement>
+          </expressionElements>
+          <expressionIdentifier>
+            <name>1565084266903</name>
+            <type>EXPECT</type>
+          </expressionIdentifier>
+          <factIdentifier>
+            <name>Overall Risk Rating</name>
+            <className>.Overall Risk Rating</className>
+          </factIdentifier>
+          <className>string</className>
+          <factAlias>Overall Risk Rating</factAlias>
+          <expressionAlias>value</expressionAlias>
+        </FactMapping>
       </factMappings>
       <dmnFilePath>src/main/resources/com/myspace/dmn_credit_risk_rating/CreditRiskRating.dmn</dmnFilePath>
       <type>DMN</type>
@@ -203,6 +221,11 @@
           <FactMappingValue>
             <factIdentifier reference="../../../../../simulationDescriptor/factMappings/FactMapping[9]/factIdentifier"/>
             <expressionIdentifier reference="../../../../../simulationDescriptor/factMappings/FactMapping[9]/expressionIdentifier"/>
+            <rawValue class="string">&quot;Low&quot;</rawValue>
+          </FactMappingValue>
+          <FactMappingValue>
+            <factIdentifier reference="../../../../../simulationDescriptor/factMappings/FactMapping[10]/factIdentifier"/>
+            <expressionIdentifier reference="../../../../../simulationDescriptor/factMappings/FactMapping[10]/expressionIdentifier"/>
             <rawValue class="string">&quot;Low&quot;</rawValue>
           </FactMappingValue>
         </factMappingValues>
