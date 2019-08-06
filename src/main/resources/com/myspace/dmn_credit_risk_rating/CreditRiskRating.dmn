@@ -201,7 +201,7 @@
     <dmn:informationRequirement id="_5BA35616-541D-4C69-8F53-63F6183538B4">
       <dmn:requiredInput href="#_EE87C06D-9BBB-4522-A4A8-F32C980363CB"/>
     </dmn:informationRequirement>
-    <dmn:decisionTable id="_F3FA8E79-7126-4620-B264-17506C361964" hitPolicy="UNIQUE" preferredOrientation="Rule-as-Row">
+    <dmn:decisionTable id="_F3FA8E79-7126-4620-B264-17506C361964" hitPolicy="FIRST" preferredOrientation="Rule-as-Row">
       <dmn:input id="_874DF1E1-19F6-4807-99AA-413341023112">
         <dmn:inputExpression id="_9FA2FA24-5C60-4D7C-8D81-05107E46E461" typeRef="string">
           <dmn:text>Registration Country</dmn:text>
