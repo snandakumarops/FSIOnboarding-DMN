@@ -128,14 +128,70 @@
     <dmn:variable id="_5187D444-AACF-4FA1-86B0-0B2E4EA1327F" name="Entity Type"/>
   </dmn:inputData>
   <dmn:decision id="_1A58A9BC-363D-4AE7-8775-0C29EB9A53DB" name="Overall Risk Rating">
-    <dmn:variable id="_E65FC6AF-7E45-4CE7-A6E4-A36DB6009C60" name="Overall Risk Rating"/>
+    <dmn:variable id="_E65FC6AF-7E45-4CE7-A6E4-A36DB6009C60" name="Overall Risk Rating" typeRef="string"/>
     <dmn:informationRequirement id="_E18A6882-1350-4B30-8366-87346A4908DC">
       <dmn:requiredDecision href="#_B82538BD-C4F9-49CF-BF7F-C19692667AA6"/>
     </dmn:informationRequirement>
     <dmn:informationRequirement id="_997D92B6-261A-4195-8261-9E1920D20828">
       <dmn:requiredDecision href="#_6CEB356E-9366-4910-85E2-AB5FD949F74D"/>
     </dmn:informationRequirement>
-    <dmn:literalExpression/>
+    <dmn:decisionTable id="_9F2B3FBE-1710-4411-969A-36C7EB74A1DA" hitPolicy="UNIQUE" preferredOrientation="Rule-as-Row">
+      <dmn:input id="_F42F8F7E-AD31-40AE-A383-EEAC9176E8DA">
+        <dmn:inputExpression id="_8E50CF7B-5E5B-4843-906F-41A8CEE7BFDF" typeRef="string">
+          <dmn:text>Segment Risk Rating</dmn:text>
+        </dmn:inputExpression>
+      </dmn:input>
+      <dmn:input id="_696DF3A5-A32A-405D-B029-1F6897C01BB7">
+        <dmn:inputExpression id="_364CA1AB-CA38-4324-B9DA-ED7CE6F9FC77" typeRef="string">
+          <dmn:text>Country Risk Rating</dmn:text>
+        </dmn:inputExpression>
+      </dmn:input>
+      <dmn:output id="_E964AB99-3165-46E7-A0AB-511A2EC0EDA7" typeRef="string"/>
+      <dmn:rule id="_FF9FAD90-2497-41C9-B1C9-A5560D528C49">
+        <dmn:inputEntry id="_EEBBBFD3-7CC2-412D-9ABF-85BC92B3D9AE">
+          <dmn:text>"High"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_F13519C6-C23A-469E-9662-1303EB8854A9">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_19CFC17C-EB4E-4353-A6B8-55B9540A854B">
+          <dmn:text>"High"</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule id="_BA10B06F-6F2D-4AB0-B71B-3650AB8CE398">
+        <dmn:inputEntry id="_6C9A81F3-3284-46F4-AB42-92061D781C0B">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_8BABE39F-39EB-492D-86CA-7810A5324730">
+          <dmn:text>"High"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_E0656B1E-335C-4507-BA68-B33D95576B4C">
+          <dmn:text>"High"</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule id="_4714746C-C10D-4A4A-BB18-E73E3267B3C3">
+        <dmn:inputEntry id="_05987D29-0506-41C0-AA7C-675206D5F3D4">
+          <dmn:text>"Medium"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_CF6B76BF-9ACF-4793-AA3F-5EBEE84DB793">
+          <dmn:text>"Low"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_2C642314-9A21-4A94-95C5-F653D1996E54">
+          <dmn:text>"Low"</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule id="_D83ECD76-81BE-4852-8CD3-34E628AE39B9">
+        <dmn:inputEntry id="_E816D12E-3DEE-46C2-A360-96EFDD2F1040">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_4EDDDC35-6C02-4CCD-BBE2-1FF73289F792">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_9CB31E27-56CE-4660-AC38-3A107616D58D">
+          <dmn:text>"Medium"</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+    </dmn:decisionTable>
   </dmn:decision>
   <dmn:decision id="_6CEB356E-9366-4910-85E2-AB5FD949F74D" name="Country Risk Rating">
     <dmn:variable id="_F724E358-1AB7-426A-ABB5-88624C7B4029" name="Country Risk Rating" typeRef="string"/>
@@ -245,6 +301,13 @@
             <kie:width>290.0</kie:width>
             <kie:width>191.0</kie:width>
             <kie:width>185.0</kie:width>
+            <kie:width>100.0</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_9F2B3FBE-1710-4411-969A-36C7EB74A1DA">
+            <kie:width>50.0</kie:width>
+            <kie:width>329.0</kie:width>
+            <kie:width>236.0</kie:width>
+            <kie:width>254.0</kie:width>
             <kie:width>100.0</kie:width>
           </kie:ComponentWidths>
         </kie:ComponentsWidthsExtension>
