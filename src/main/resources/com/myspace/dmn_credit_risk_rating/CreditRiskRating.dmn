@@ -50,7 +50,7 @@
           <dmn:text>["Sole Proprietorship","General Patnership"]</dmn:text>
         </dmn:inputEntry>
         <dmn:inputEntry id="_D02C0BE3-4967-4FFE-843F-3ECB46D59656">
-          <dmn:text>&gt;10000</dmn:text>
+          <dmn:text>-</dmn:text>
         </dmn:inputEntry>
         <dmn:inputEntry id="_3D0BCD6D-43CF-441D-B730-D20642E5F91A">
           <dmn:text>&gt;200000</dmn:text>
