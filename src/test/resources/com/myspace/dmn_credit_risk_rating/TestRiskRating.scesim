@@ -121,42 +121,6 @@
         <FactMapping>
           <expressionElements>
             <ExpressionElement>
-              <step>Country Risk Rating</step>
-            </ExpressionElement>
-          </expressionElements>
-          <expressionIdentifier>
-            <name>0|6</name>
-            <type>EXPECT</type>
-          </expressionIdentifier>
-          <factIdentifier>
-            <name>Country Risk Rating</name>
-            <className>Country Risk Rating</className>
-          </factIdentifier>
-          <className>string</className>
-          <factAlias>Country Risk Rating</factAlias>
-          <expressionAlias>value</expressionAlias>
-        </FactMapping>
-        <FactMapping>
-          <expressionElements>
-            <ExpressionElement>
-              <step>Overall Risk Rating</step>
-            </ExpressionElement>
-          </expressionElements>
-          <expressionIdentifier>
-            <name>0|7</name>
-            <type>EXPECT</type>
-          </expressionIdentifier>
-          <factIdentifier>
-            <name>Overall Risk Rating</name>
-            <className>Overall Risk Rating</className>
-          </factIdentifier>
-          <className>string</className>
-          <factAlias>Overall Risk Rating</factAlias>
-          <expressionAlias>value</expressionAlias>
-        </FactMapping>
-        <FactMapping>
-          <expressionElements>
-            <ExpressionElement>
               <step>Segment Risk Rating</step>
             </ExpressionElement>
           </expressionElements>
@@ -211,14 +175,6 @@
           <FactMappingValue>
             <factIdentifier reference="../../../../../simulationDescriptor/factMappings/FactMapping[8]/factIdentifier"/>
             <expressionIdentifier reference="../../../../../simulationDescriptor/factMappings/FactMapping[8]/expressionIdentifier"/>
-          </FactMappingValue>
-          <FactMappingValue>
-            <factIdentifier reference="../../../../../simulationDescriptor/factMappings/FactMapping[9]/factIdentifier"/>
-            <expressionIdentifier reference="../../../../../simulationDescriptor/factMappings/FactMapping[9]/expressionIdentifier"/>
-          </FactMappingValue>
-          <FactMappingValue>
-            <factIdentifier reference="../../../../../simulationDescriptor/factMappings/FactMapping[10]/factIdentifier"/>
-            <expressionIdentifier reference="../../../../../simulationDescriptor/factMappings/FactMapping[10]/expressionIdentifier"/>
             <rawValue class="string">&quot;Low&quot;</rawValue>
           </FactMappingValue>
           <FactMappingValue>
