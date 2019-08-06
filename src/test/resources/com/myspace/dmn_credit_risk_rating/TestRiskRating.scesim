@@ -150,7 +150,7 @@
           <FactMappingValue>
             <factIdentifier reference="../../../../../simulationDescriptor/factMappings/FactMapping[3]/factIdentifier"/>
             <expressionIdentifier reference="../../../../../simulationDescriptor/factMappings/FactMapping[3]/expressionIdentifier"/>
-            <rawValue class="string">&quot;General Partnership&quot;</rawValue>
+            <rawValue class="string">[&quot;Sole Proprietorship&quot;,&quot;General Patnership&quot;]</rawValue>
           </FactMappingValue>
           <FactMappingValue>
             <factIdentifier reference="../../../../../simulationDescriptor/factMappings/FactMapping[4]/factIdentifier"/>
