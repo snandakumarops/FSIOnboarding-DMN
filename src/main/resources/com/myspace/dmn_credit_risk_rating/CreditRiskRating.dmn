@@ -135,7 +135,7 @@
     <dmn:informationRequirement id="_D391A205-67DE-4370-AF2F-5EE985331F41">
       <dmn:requiredDecision href="#_6CEB356E-9366-4910-85E2-AB5FD949F74D"/>
     </dmn:informationRequirement>
-    <dmn:decisionTable id="_9F2B3FBE-1710-4411-969A-36C7EB74A1DA" hitPolicy="UNIQUE" preferredOrientation="Rule-as-Row">
+    <dmn:decisionTable id="_9F2B3FBE-1710-4411-969A-36C7EB74A1DA" hitPolicy="FIRST" preferredOrientation="Rule-as-Row">
       <dmn:input id="_F42F8F7E-AD31-40AE-A383-EEAC9176E8DA">
         <dmn:inputExpression id="_8E50CF7B-5E5B-4843-906F-41A8CEE7BFDF" typeRef="string">
           <dmn:text>Segment Risk Rating</dmn:text>
