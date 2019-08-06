@@ -12,7 +12,7 @@
     <dmn:informationRequirement id="_029FD8C9-77B0-4038-864E-EE688A4046E7">
       <dmn:requiredInput href="#_97D8772B-266F-4E15-BA33-4FEA8719350F"/>
     </dmn:informationRequirement>
-    <dmn:decisionTable id="_99D09239-09BB-40E8-A0E1-D4EF359944E7" hitPolicy="UNIQUE" preferredOrientation="Rule-as-Row">
+    <dmn:decisionTable id="_99D09239-09BB-40E8-A0E1-D4EF359944E7" hitPolicy="FIRST" preferredOrientation="Rule-as-Row">
       <dmn:input id="_E11ED5B5-4943-4B9A-BE55-A73B43C7A857">
         <dmn:inputExpression id="_7B26310F-7B80-4622-9D25-5614508A943F" typeRef="string">
           <dmn:text>Entity Type</dmn:text>
